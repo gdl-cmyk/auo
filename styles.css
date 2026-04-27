@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-dark: #0a0a0c;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --neon-purple: #a154f2;
+  --neon-blue: #2de2ff;
+  --text-main: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: radial-gradient(circle at 50% 50%, #16162d 0%, #0a0a0c 100%);
+  color: var(--text-main);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.5s ease;
+}
+
+body.light-theme {
+  background: #f4f4f9;
+  --text-main: #1a1a1a;
+  --glass: rgba(0, 0, 0, 0.05);
+}
+
+header, main {
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+}
+
+header {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 25px 25px 0 0;
+  border-bottom: none;
+}
+
+main {
+  padding: 20px;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue);
+  margin-bottom: 15px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+}
+
+h2 {
+  font-size: 0.8rem;
+  color: var(--neon-purple);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.comment-item {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border-left: 2px solid var(--neon-blue);
+}
+
+.theme-btn {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--glass);
+  color: var(--text-main);
+  border: 1px solid var(--neon-purple);
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  color: var(--neon-purple);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #0f0f12;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid var(--neon-purple);
+  width: 90%;
+  max-width: 380px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+}

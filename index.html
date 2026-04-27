@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Ivan Shyian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="theme-toggle" class="theme-btn">Змінити тему</button>
+  
+  <header>
+    <div class="profile-photo-container">
+      <img src="profile.jpg" alt="Ivan Shyian" class="profile-photo">
+    </div>
+    <div class="header-text">
+      <h1>Ivan Shyian</h1>
+      <p class="subtitle">Second year cybersecurity student | Group KB-203</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>About me</h2>
+      <p>I study cybersecurity and I am interested in IT and information security. I work with Linux distributions and have basic knowledge of networking and Python.</p>
+    </section>
+
+    <section class="card">
+      <h2>Відгуки роботодавців (Варіант 27)</h2>
+      <div id="comments-container"></div>
+    </section>
+
+    <section class="card">
+      <h2>Skills & OS</h2>
+      <ul class="clean-list">
+        <li><strong>Operating Systems:</strong> Linux (Kali, Ubuntu)</li>
+        <li><strong>Programming:</strong> Python, JS, SQL</li>
+      </ul>
+    </section>
+
+    <section class="card crypto-section">
+      <h2>Crypto Support</h2>
+      <div class="wallet-card">
+        <div class="wallet-info">
+          <span class="wallet-label">TON Address</span>
+          <code class="wallet-address">UQCgvY3plSSJM2OFabLp9jJTHMm1PbT8FdhbiACBOClYs91n</code>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="os-browserinfo"></p>
+  </footer>
+
+  <div id="feedback-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h2>Let's connect</h2>
+      <form action="https://formspree.io/f/mdapnkvw" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="tel" name="phone" placeholder="Contact number" required>
+        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+        <button type="submit" class="submit-btn">Відправити</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
